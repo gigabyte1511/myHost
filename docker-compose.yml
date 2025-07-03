@@ -11,3 +11,9 @@ services:
     volumes:
       - ./nginx-proxy-manager/data:/data
       - ./nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+    networks:
+      - nginx_shared
+
+networks:
+  nginx_shared:
+    external: true
